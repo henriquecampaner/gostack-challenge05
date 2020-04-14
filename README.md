@@ -1,10 +1,10 @@
 <img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios.png" />
 
 <h3 align="center">
-  Desafio 05: Primeiro projeto Node.js
+  Challenge 05: First Node.js project
 </h3>
 
-<p align="center">“Para quem fica melhor a cada dia, ficar pronto é utopia”!</blockquote>
+<p align="center">“For those who get better every day, getting ready is utopia”!</blockquote>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafios?color=%2304D361">
@@ -21,32 +21,21 @@
 </p>
 
 <p align="center">
-  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#calendar-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#rocket-sobre-o-desafio">about the challenge</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">License</a>
 </p>
 
-## :rocket: Sobre o desafio
+## :rocket: About the challenge
 
-Nesse desafio, você deve criar uma aplicação para continuar treinando o que você aprendeu até agora no Node.js junto ao TypeScript, utilizando o conceito de models, repositories e services!
+In this challenge, you must create an application to continue training what you have learned so far in Node.js with TypeScript, using the concept of models, repositories and services!
 
-Essa será uma aplicação para que deve armazenar transações financeiras de entrada e saída, que deve permitir o cadastro e a listagem dessas transações.
+This will be an application for storing incoming and outgoing financial transactions, which should allow the registration and listing of these transactions.
 
-### Template da aplicação
+### Application routes
 
-Para te ajudar nesse desafio, criamos para você um modelo que você deve utilizar como um template do Github.
+Now that you have the template cloned, and ready to continue, you should check the files in the `src` folder and complete where there is no code with the code to achieve the objectives of each route.
 
-O template está disponível na seguinte url: **[Acessar Template](https://github.com/Rocketseat/gostack-template-fundamentos-node)**
-
-**Dica**: Caso não saiba utilizar repositórios do Github como template, temos um guia em **[nosso FAQ](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
-
-Agora navegue até a pasta criada e abra no Visual Studio Code, lembre-se de executar o comando `yarn` no seu terminal para instalar todas as dependências.
-
-### Rotas da aplicação
-
-Agora que você já está com o template clonado, e pronto para continuar, você deve verificar os arquivos da pasta `src` e completar onde não possui código com o código para atingir os objetivos de cada rota.
-
-- **`POST /transactions`**: A rota deve receber `title`, `value` e `type` dentro do corpo da requisição, sendo `type` o tipo da transação, que deve ser `income` para entradas (depósitos) e `outcome` para saidas (retiradas). Ao cadastrar uma nova transação, ela deve ser armazenada dentro de um objeto com o formato como o seguinte:
+- ** `POST / transactions` **: The route must receive` title`, `value` and` type` within the body of the request, with `type` being the type of the transaction, which must be` income` for entries ( deposits) and outcome for withdrawals. When registering a new transaction, it must be stored inside an object with the format like the following:
 
 ```json
 {
