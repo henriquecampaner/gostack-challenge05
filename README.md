@@ -35,7 +35,7 @@ This will be an application for storing incoming and outgoing financial transact
 
 Now that you have the template cloned, and ready to continue, you should check the files in the `src` folder and complete where there is no code with the code to achieve the objectives of each route.
 
-- ** `POST / transactions` **: The route must receive` title`, `value` and` type` within the body of the request, with `type` being the type of the transaction, which must be` income` for entries ( deposits) and outcome for withdrawals. When registering a new transaction, it must be stored inside an object with the format like the following:
+- **`POST / transactions`**: The route must receive` title`, `value` and` type` within the body of the request, with `type` being the type of the transaction, which must be` income` for entries ( deposits) and outcome for withdrawals. When registering a new transaction, it must be stored inside an object with the format like the following:
 
 ```json
 {
@@ -46,32 +46,32 @@ Now that you have the template cloned, and ready to continue, you should check t
 }
 ```
 
-- **`GET /transactions`**: Essa rota deve retornar uma listagem com todas as transações que você cadastrou até agora, junto com o valor de soma de entradas, retiradas e total de crédito. Essa rota deve retornar um objeto com o formato a seguir:
+- **`GET / transactions`**: This route should return a listing with all the transactions that you have registered so far, together with the sum of entries, withdrawals and total credit. This route must return an object with the following format:
 
 ```json
 {
   "transactions": [
     {
       "id": "uuid",
-      "title": "Salário",
+      "title": "Salary",
       "value": 4000,
       "type": "income"
     },
     {
       "id": "uuid",
-      "title": "Freela",
+      "title": "Freelance",
       "value": 2000,
       "type": "income"
     },
     {
       "id": "uuid",
-      "title": "Pagamento da fatura",
+      "title": "Invoice payment",
       "value": 4000,
       "type": "outcome"
     },
     {
       "id": "uuid",
-      "title": "Cadeira Gamer",
+      "title": "Gamer Chair",
       "value": 1200,
       "type": "outcome"
     }
@@ -84,32 +84,25 @@ Now that you have the template cloned, and ready to continue, you should check t
 }
 ```
 
-**Dica**: Dentro de balance, o income é a soma de todos os valores das transações com `type` income. O outcome é a soma de todos os valores das transações com `type` outcome, e o total é o valor de `income - outcome`.
+### Testing specification
+In each test, you have a brief description of what your application must do in order for the test to pass.
 
-**Dica 2**: Para fazer a soma dos valores, você pode usar a função [reduce](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) para agrupar as transações pela propriedade `type`, assim você irá conseguir somar todos os valores com facilidade e obter o retorno do `balance`.
+For this challenge we have the following tests:
 
-### Específicação dos testes
+- **`should be able to create a new transaction`**: For this test to pass, your application must allow a transaction to be created, and return a json with the created transaction.
 
-Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
+- **`should be able to list the transactions`**: In order for this test to pass, your application must allow an object containing all transactions to be returned together with the balance of income, outcome and total transactions that were created up to the time.
 
-Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dé uma olhada em **[nosso FAQ](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
+- **`should not be able to create outcome transaction without a valid balance`**: In order for this test to pass, your application must not allow a 'outcome` type transaction to exceed the total amount that the user has in cash, returning a response with HTTP 400 code and an error message in the following format: `{error: string}`
 
-Para esse desafio temos os seguintes testes:
+## :calendar: Delivery
 
-- **`should be able to create a new transaction`**: Para que esse teste passe, sua aplicação deve permitir que uma transação seja criada, e retorne um json com a transação criado.
+This challenge must be delivered from the Skylab platform, send the link to the repository where you made your changes. After completing the challenge, making a post on Linkedin and posting the code on Github is a good way to demonstrate your knowledge and efforts to evolve your career for future opportunities.
 
-- **`should be able to list the transactions`**: Para que esse teste passe, sua aplicação deve permitir que seja retornado um objeto contendo todas as transações junto ao balanço de income, outcome e total das transações que foram criadas até o momento.
+## :memo: License
 
-- **`should not be able to create outcome transaction without a valid balance`**: Para que esse teste passe, sua aplicação não deve permitir que uma transação do tipo `outcome` extrapole o valor total que o usuário tem em caixa, retornando uma resposta com código HTTP 400 e uma mensagem de erro no seguinte formato: `{ error: string }`
-
-## :calendar: Entrega
-
-Esse desafio deve ser entregue a partir da plataforma Skylab, envie o link do repositório que você fez suas alterações. Após concluir o desafio, fazer um post no Linkedin e postar o código no Github é uma boa forma de demonstrar seus conhecimentos e esforços para evoluir na sua carreira para oportunidades futuras.
-
-## :memo: Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+This project is under the MIT license. See the [LICENSE] file (LICENSE.md) for more details.
 
 ---
 
-Feito com 💜 by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+Made with 💜 by Rocketseat: wave: [Join our community!] (Https://discordapp.com/invite/gCRAFhc)
