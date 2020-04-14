@@ -95,10 +95,6 @@ For this challenge we have the following tests:
 
 - **`should not be able to create outcome transaction without a valid balance`**: In order for this test to pass, your application must not allow a 'outcome` type transaction to exceed the total amount that the user has in cash, returning a response with HTTP 400 code and an error message in the following format: `{error: string}`
 
-## :calendar: Delivery
-
-This challenge must be delivered from the Skylab platform, send the link to the repository where you made your changes. After completing the challenge, making a post on Linkedin and posting the code on Github is a good way to demonstrate your knowledge and efforts to evolve your career for future opportunities.
-
 ## :memo: License
 
 This project is under the MIT license. See the [LICENSE] file (LICENSE.md) for more details.
